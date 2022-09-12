@@ -1,0 +1,16 @@
+body{
+    height: 100%;
+    width: 100%;
+}
+.padre{
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+.titulo{
+
+}
+
+.portada{
+
+}
