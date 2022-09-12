@@ -7,10 +7,44 @@ body{
     align-self: center;
     align-items: center;
 }
-.titulo{
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #DDD0CD;
+    border-radius: 10px;
+    height: 80px;
+  }
+  
+
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
+    text-decoration: none;
+    float: left; /* Una forma de centrar  */
+    font-family: 'Roboto', sans-serif;
+}
+.home{
+    margin-left: -375px;
+    margin-top: 13px;
+}
+.generos{
+    margin-left: -280px;
+    margin-top: 13px;
 }
 
-.portada{
-
+.favorite{
+    margin-left: -160px;
+    margin-top: 13px;
+}
+.logo{
+    width: 16%;
+    height: 16%;
+    margin-left: -80%;
+    margin-top: -2%;
 }
