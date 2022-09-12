@@ -1,0 +1,27 @@
+.conteiner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    background-color: rgb(255, 182, 93);
+    border: 15px;
+    height: 650px;
+}
+
+.alvin1{
+    height: 290px;
+    align-self: center;
+}
+
+.item{
+    align-items: center;
+    background-color: rgba(246, 242, 111, 0.787);
+    margin: 35px;
+    padding: 35px;
+    width: 210px;
+    height: 330px;
+}
+
+.fav{
+    background-color: blanchedalmond;
+}
