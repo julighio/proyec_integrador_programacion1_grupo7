@@ -13,7 +13,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #DDD0CD;
     border-radius: 10px;
     height: 80px;
   }
@@ -30,21 +29,35 @@ ul {
     font-family: 'Roboto', sans-serif;
 }
 .home{
-    margin-left: -375px;
+    margin-left: -305px;
     margin-top: 13px;
 }
 .generos{
-    margin-left: -280px;
+    margin-left: -185px;
     margin-top: 13px;
 }
 
 .favorite{
-    margin-left: -160px;
+    margin-left: -45px;
     margin-top: 13px;
 }
 .logo{
     width: 16%;
     height: 16%;
-    margin-left: -80%;
+    margin-left: -70%;
     margin-top: -2%;
 }
+
+.buscador{
+    width: 220px;
+    height: 15px;
+    margin-top: 18px;
+    margin-left: 50px;
+    background-color:antiquewhite;
+    border-radius: 25px;
+    color: darkgray;
+    text-align:left;
+
+
+}
+
