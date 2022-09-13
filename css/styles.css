@@ -1,14 +1,14 @@
-body{
+body{ /*todos los html*/
     height: 100%;
     width: 100%;
 }
-.padre{
+.padre{ /*detail-movie*/
     display: flex;
     align-self: center;
     align-items: center;
 }
 
-ul {
+ul { /*todos los html (nav)*/
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ ul {
   }
   
 
-  li a {
+li a { /*todos los html (nav)*/
     display: block;
     color: black;
     text-align: center;
@@ -28,27 +28,27 @@ ul {
     float: left; /* Una forma de centrar  */
     font-family: 'Roboto', sans-serif;
 }
-.home{
+.home{ /*todos los html (nav)*/
     margin-left: -305px;
     margin-top: 13px;
 }
-.generos{
+.generos{ /*todos los html (nav)*/
     margin-left: -185px;
     margin-top: 13px;
 }
 
-.favorite{
+.favorite{ /*todos los html (nav)*/
     margin-left: -45px;
     margin-top: 13px;
 }
-.logo{
+.logo{ /*todos los html (nav)*/
     width: 16%;
     height: 16%;
     margin-left: -70%;
     margin-top: -2%;
 }
 
-.buscador{
+.buscador{ /*todos los html (nav)*/
     width: 220px;
     height: 15px;
     margin-top: 18px;
@@ -61,3 +61,60 @@ ul {
 
 }
 
+.titulo{ /*los titulos principales de la home page*/
+    font-family: 'Roboto', sans-serif;
+    margin-left: 40px;
+}
+
+.titulo2{ /*los titulos principales de la home page*/
+    font-family: 'Roboto', sans-serif;
+    margin-left: 40px;
+    margin-top:50px;
+}
+
+.titulo3{ /*los titulos principales de la home page*/
+    font-family: 'Roboto', sans-serif;
+    margin-left: 40px;
+    margin-top:50px;
+}
+
+.portadaCard{ /*bloque del cuadrado de las peliculas*/
+    height: 380px;
+    width: 250px;
+    background-color:darkgrey;
+    margin-left:30px;
+    border-radius: 8px;
+    box-shadow: 5px 10px #c5bfbf;
+
+
+}
+.portada{ /*foto de las peliculas*/
+    height: 300px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left:23px;
+    border-radius: 15px;
+    text-shadow: 2px 2px red;
+    
+}
+
+.texto-info{ /*titulo de las peliculas*/
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+.cards{ /*para poner una pelicula al lado de la otra en la primer fila*/
+    display: flex;
+}
+
+.cards2{ /*para poner una pelicula al lado de la otra en la segunda fila*/
+    display: flex;
+    margin-top: 40px;
+}
+
+.cards3{ /*para poner una pelicula al lado de la otra en la tercer fila*/
+    display: flex;
+    margin-top: 40px;
+}
