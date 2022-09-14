@@ -94,8 +94,6 @@ li a { /*todos los html (nav)*/
     margin-top: 20px;
     margin-left:23px;
     border-radius: 15px;
-    text-shadow: 2px 2px red;
-    
 }
 
 .texto-info{ /*titulo de las peliculas*/
@@ -117,4 +115,41 @@ li a { /*todos los html (nav)*/
 .cards3{ /*para poner una pelicula al lado de la otra en la tercer fila*/
     display: flex;
     margin-top: 40px;
+}
+
+.generosPeliculas{
+    display: flex;
+}
+
+.generosPeliculas2{
+    display: flex;
+    margin-top: 50px;
+}
+
+.generosSeries{
+    display: flex;
+}
+
+.generosSeries2{
+    display: flex;
+    margin-top: 50px;
+}
+
+.boxGeneros{
+    height: 50px;
+    width: 250px;
+    background-color:darkgrey;
+    margin-left:30px;
+    border-radius: 8px;
+    box-shadow: 5px 10px #c5bfbf;
+}
+
+.titulosGeneros{
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    float: center;
+    display: block;
+    padding: 14px 16px;
+    color: black;
 }
