@@ -48,13 +48,15 @@ li a { /*todos los html (nav)*/
     height: 16%;
     margin-left: -70%;
     margin-top: -2%;
+    border-radius: 100px;
 }
 
 .buscador{ /*todos los html (nav)*/
+    
     width: 220px;
     height: 15px;
     margin-top: 18px;
-    margin-left: 50px;
+    margin-left: 500px;
     background-color:antiquewhite;
     border-radius: 25px;
     color: darkgray;
@@ -83,12 +85,10 @@ li a { /*todos los html (nav)*/
 .portadaCard{ /*bloque del cuadrado de las peliculas*/
     height: 380px;
     width: 250px;
-    background-color:darkgrey;
+    background-color:rgb(186, 145, 104);
     margin-left:30px;
     border-radius: 8px;
-    box-shadow: 5px 10px #c5bfbf;
-
-
+    box-shadow:5px 10px rgb(243, 202, 162);
 }
 .portada{ /*foto de las peliculas*/
     height: 300px;
@@ -140,10 +140,10 @@ li a { /*todos los html (nav)*/
 .boxGeneros{
     height: 50px;
     width: 250px;
-    background-color:darkgrey;
+    background-color:rgb(186, 145, 104);
     margin-left:30px;
     border-radius: 8px;
-    box-shadow: 5px 10px #c5bfbf;
+    box-shadow:5px 10px rgb(243, 202, 162);
 }
 
 .titulosGeneros{
@@ -181,17 +181,17 @@ li a { /*todos los html (nav)*/
 
 .item{
     align-items: center;
-    background-color:darkgrey;
+    background-color:rgb(186, 145, 104);
     margin: 35px;
     padding: 35px;
     width: 210px;
     height: 330px;
-    box-shadow: 5px 10px #c5bfbf;
+    box-shadow:5px 10px rgb(243, 202, 162);
     border-radius: 8px;
 }
 
 .fav{
-    background-color:rgb(216, 216, 216)
+    background-color:darkgray;
 }
 
 /*CSS Search */
@@ -213,12 +213,12 @@ li a { /*todos los html (nav)*/
 
 .item_search{
     align-items: center;
-    background-color:darkgrey;
+    background-color:rgb(186, 145, 104);
     margin: 35px;
     padding: 35px;
     width: 210px;
     height: 330px;
-    box-shadow: 5px 10px #c5bfbf;
+    box-shadow:5px 10px rgb(243, 202, 162);
 }
 
 .footer{
