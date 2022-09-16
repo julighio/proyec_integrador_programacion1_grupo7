@@ -54,7 +54,7 @@ li a { /*todos los html (nav)*/
 .buscador{ /*todos los html (nav)*/
     
     width: 220px;
-    height: 15px;
+    height: 30px;
     margin-top: 18px;
     margin-left: 500px;
     background-color:antiquewhite;
@@ -172,6 +172,7 @@ li a { /*todos los html (nav)*/
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-size: 22px;
+    margin-top: 3px;
 }
 .alvin1{
     height: 290px;
