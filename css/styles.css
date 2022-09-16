@@ -106,19 +106,28 @@ li a { /*todos los html (nav)*/
 }
 
 .portadaCard{ /*bloque del cuadrado de las peliculas*/
-    height: 380px;
+    height: 420px;
     width: 250px;
     background-color:rgb(186, 145, 104);
     margin-left:30px;
     border-radius: 8px;
     box-shadow:5px 10px rgb(243, 202, 162);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .portada{ /*foto de las peliculas*/
     height: 300px;
-    width: 200px;
+    width: 180px;
     margin-top: 20px;
-    margin-left:23px;
     border-radius: 15px;
+    display: flex;
+}
+
+.portada:hover{
+    width: 250px;
+    height: 480px;
 }
 
 .texto-info{ /*titulo de las peliculas*/
@@ -126,6 +135,14 @@ li a { /*todos los html (nav)*/
     font-size: 30px;
     margin-top: 3px;
     text-align: center;
+    margin-bottom: 0;
+}
+
+.texto-año{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
 }
 
 .cards{ /*para poner una pelicula al lado de la otra en la primer fila*/
@@ -185,7 +202,6 @@ li a { /*todos los html (nav)*/
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around; 
-    
     border: 15px;
     height: 650px;
     border-radius: 8px;
@@ -198,20 +214,24 @@ li a { /*todos los html (nav)*/
     margin-top: 3px;
 }
 .alvin1{
-    height: 290px;
+    height: 280px;
     align-self: center;
+    width: 230px;
     border-radius: 15px;
+    display: flex;
 }
 
-.item{
-    align-items: center;
+
+.itemalvin1{
+    height: 420px;
+    width: 290px;
     background-color:rgb(186, 145, 104);
-    margin: 35px;
-    padding: 35px;
-    width: 210px;
-    height: 330px;
-    box-shadow:5px 10px rgb(243, 202, 162);
     border-radius: 8px;
+    box-shadow:5px 10px rgb(243, 202, 162);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .fav{
@@ -225,7 +245,6 @@ li a { /*todos los html (nav)*/
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around; 
-
     border: 15px;
     height: 650px;
 }
@@ -237,17 +256,23 @@ li a { /*todos los html (nav)*/
 }
 
 .item_search{
-    align-items: center;
+    height: 420px;
+    width: 290px;
     background-color:rgb(186, 145, 104);
-    margin: 35px;
-    padding: 35px;
-    width: 210px;
-    height: 330px;
+    border-radius: 8px;
     box-shadow:5px 10px rgb(243, 202, 162);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer{
     font-size: 15px;
     text-align: right;
     font-family: 'Oswald', sans-serif;
+}
+
+.ocultar {
+    display: none;
 }
