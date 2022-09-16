@@ -1,3 +1,5 @@
+
+
 body{ /*todos los html*/
     height: 100%;
     width: 100%;
@@ -152,4 +154,69 @@ li a { /*todos los html (nav)*/
     display: block;
     padding: 14px 16px;
     color: black;
+}
+
+/* CSS de Favorite*/
+.conteiner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    
+    border: 15px;
+    height: 650px;
+    border-radius: 8px;
+}
+
+.tituloAlvin {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+}
+.alvin1{
+    height: 290px;
+    align-self: center;
+    border-radius: 15px;
+}
+
+.item{
+    align-items: center;
+    background-color:darkgrey;
+    margin: 35px;
+    padding: 35px;
+    width: 210px;
+    height: 330px;
+    box-shadow: 5px 10px #c5bfbf;
+    border-radius: 8px;
+}
+
+.fav{
+    background-color:rgb(216, 216, 216)
+}
+
+/*CSS Search */
+
+.conteiner_search{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    background-color:darkgrey;
+    border: 15px;
+    height: 650px;
+}
+
+.alvin_search{
+    height: 290px;
+    align-self: center;
+}
+
+.item_search{
+    align-items: center;
+    background-color:darkgrey;
+    margin: 35px;
+    padding: 35px;
+    width: 210px;
+    height: 330px;
+    box-shadow: 5px 10px #c5bfbf;
 }
