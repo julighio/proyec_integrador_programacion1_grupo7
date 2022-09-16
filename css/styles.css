@@ -191,7 +191,7 @@ li a { /*todos los html (nav)*/
 }
 
 .fav{
-    background-color:darkgray;
+    background-color:rgb(186, 145, 104);
 }
 
 /*CSS Search */
@@ -201,14 +201,15 @@ li a { /*todos los html (nav)*/
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around; 
-    background-color:darkgrey;
+
     border: 15px;
     height: 650px;
 }
 
-.alvin_search{
+.alvin1{
     height: 290px;
     align-self: center;
+    border-radius: 15px;
 }
 
 .item_search{
