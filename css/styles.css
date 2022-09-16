@@ -6,8 +6,31 @@ body{ /*todos los html*/
 }
 .padre{ /*detail-movie*/
     display: flex;
-    align-self: center;
-    align-items: center;
+    
+}
+.hijo2{
+    margin-left: 10px;
+} 
+    
+.miul{
+    height: 420px;
+}
+
+.miul li{
+    font-size: 30px;
+}
+
+
+.portadatom{
+    height: 58vh;
+    width: 41vh;
+    border-radius: 25px;
+}
+.titulotomfriends{
+    margin-left: 101px;
+}
+.titulotomgru{
+margin-left: 56px;
 }
 
 ul { /*todos los html (nav)*/
