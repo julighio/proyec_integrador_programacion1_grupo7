@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search page</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
             <ul>
                 <li> <a> <img class="logo" src="./imagenes/logo.png"> </a></li>
                 <li> <a class="home" href="index.html">Home</a> </li>
-                <li> <a class= "generos" href="generos.html"> Generos</a> </li>
+                <li> <a class= "generos" href="generos.html"> Géneros</a> </li>
                 <li> <a class= "favorite" href="favorite.html">Favoritos</a></li>
                 <li> <form action="./search-results.html" method="GET" class="input">
                     <input type="search" name="busqueda" placeholder="..." class="buscador">
@@ -28,48 +28,52 @@
             </ul>
             </nav>
     </header>
-<br>
+    <br>
 
-<div>
-    <h1>Resutados de busqueda: FRIENDS</h1>
-</div>
+    <main>
+        <h1><em>Resutados de busqueda:</em> FRIENDS</h1>
+        <section class="ocultar">
+            <h2>No hay Resutados de la busqueda: FRIENDS</h2>
+        </section>
 
-<div class="ocultar">
-    <h1>No hay Resutados de la busqueda: FRIENDS</h1>
-</div>
+        <section class="conteiner">
+            <article class="portadaFavoritos">
+                <a href="./detail_series.html">
+                    <img class= "alvin1" src="./imagenes/friends.jpeg" alt="">
+                    <h3 class="texto-info">Friends</h3>
+                    <p class="texto-año">1994</p>
+                </a> 
+            </article>
 
-<div>
-    <section class="conteiner_search">
-        <article class="item_search alvin1"> 
-            <img class= "alvin1" src="./imagenes/friends.jpeg" alt="">
-            <h3 class="tituloAlvin">Friends</h3>
-            <p class="texto-año">1994</p>
-        </article>
+            <article class="portadaFavoritos"> 
+                <a href="./detail_movie.html">
+                    <img class= "alvin1" src="./imagenes/avatar.webp" alt="">
+                    <h3 class="texto-info">Avatar</h3>
+                    <p class="texto-año">2010</p>
+                </a>
+            </article>
 
-        <article class=" item_search alvin1"> 
-            
-            <img class= "alvin1" src="./imagenes/avatar.webp" alt="">
-            <h3 class="tituloAlvin">Avatar</h3>
-            <p class="texto-año">2010</p>
-        </article>
+            <article class="portadaFavoritos">
+                <a href="./detail_series.html">
+                    <img class= "alvin1" src="./imagenes/outer-banks.jpeg" alt="">
+                    <h3 class="texto-info">Outer Banks</h3>
+                    <p class="texto-año">2020</p>
+                </a>
+            </article>
 
-        <article class=" item_search alvin1"> 
-            <img class= "alvin1" src="./imagenes/outer-banks.jpeg" alt="">
-            <h3 class="tituloAlvin">Outer Banks</h3>
-            <p class="texto-año">2020</p>
-        </article>
+            <article class="portadaFavoritos"> 
+                <a href="./detail_series.html">
+                    <img class= "alvin1" src="./imagenes/breakingbad.jpeg" alt="">
+                    <h3 class="texto-info">Breaking Bad</h3>
+                    <p class="texto-año">2008</p>
+                </a>
+            </article>
+        </section>
 
-        <article class=" item_search alvin1"> 
-            <img class= "alvin1" src="./imagenes/breakingbad.jpeg" alt="">
-            <h3 class="tituloAlvin">Breaking Bad</h3>
-            <p class="texto-año">2008</p>
-        </article>
-    </section>
-</div>
-
-<footer>
-    <p class="footer">Julia Ghio Rivas, Benjamin Grondona y Tomas Hartenstein</p>
-</footer>
+    </main>
+    <footer>
+        <p class="footer">Julia Ghio Rivas, Benjamin Grondona y Tomas Hartenstein</p>
+    </footer>
 
 </body>
 </html>

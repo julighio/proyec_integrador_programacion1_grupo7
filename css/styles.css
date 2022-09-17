@@ -1,48 +1,10 @@
-
-
 body{ /*todos los html*/
     height: 100%;
     width: 100%;
 }
-.padre{ /*detail-movie*/
-    display: flex;
-
-}
-.hijo2{
-    margin-left: 10px;
-} 
-    
-.miul{
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.miul li{
-    font-size: 25px;
-}
 
 
-.portadatom{
-    height: 58vh;
-    width: 41vh;
-    border-radius: 25px;
-}
-.titulotomfriends{
-    margin-left: 101px;
-    font-size: 30px;
-}
-.titulotomgru{
-margin-left: 56px;
-}
-.trailer{
-    color: red;
-    font-size: 50px;
-   
-    
-}
-
+/*CSS del nav*/
 ul { /*todos los html (nav)*/
     list-style-type: none;
     margin: 0;
@@ -52,9 +14,6 @@ ul { /*todos los html (nav)*/
     height: 80px;
   }
   
-.generoComedia{
-    
-}
 
 li a { /*todos los html (nav)*/
     display: block;
@@ -97,28 +56,27 @@ li a { /*todos los html (nav)*/
     border-radius: 25px;
     color: darkgray;
     text-align:left;
-
-
 }
 
+
+/*CSS de index*/
 .titulo{ /*los titulos principales de la home page*/
     font-family: 'Roboto', sans-serif;
     margin-left: 40px;
+    background-color:antiquewhite;
+    font-size: 30px;
 }
 
-.titulo2{ /*los titulos principales de la home page*/
+.titulo2y3{ /*los titulos principales de la home page y de la pagina de generos*/
     font-family: 'Roboto', sans-serif;
     margin-left: 40px;
     margin-top:50px;
+    background-color:antiquewhite;
+    font-size: 30px;
 }
 
-.titulo3{ /*los titulos principales de la home page*/
-    font-family: 'Roboto', sans-serif;
-    margin-left: 40px;
-    margin-top:50px;
-}
 
-.portadaCard{ /*bloque del cuadrado de las peliculas*/
+.portadaCard{ /*bloque del cuadrado de las peliculas en index*/
     height: 420px;
     width: 250px;
     background-color:rgb(186, 145, 104);
@@ -130,7 +88,7 @@ li a { /*todos los html (nav)*/
     align-items: center;
     justify-content: center;
 }
-.portada{ /*foto de las peliculas*/
+.portada{ /*foto de las peliculas en index*/
     height: 300px;
     width: 180px;
     margin-top: 20px;
@@ -138,24 +96,26 @@ li a { /*todos los html (nav)*/
     display: flex;
 }
 
-.portada:hover{
-    width: 250px;
-    height: 480px;
+.portada:hover{ /*para que se agrande la imagen cuando pasas el mouse por arriba*/
+    width: 200px;
+    height: 350px;
 }
 
-.texto-info{ /*titulo de las peliculas*/
+.texto-info{ /*titulo de las peliculas en todos los html*/
     font-family: 'Oswald', sans-serif;
     font-size: 30px;
     margin-top: 3px;
     text-align: center;
     margin-bottom: 0;
+    color: black;
 }
 
-.texto-año{
+.texto-año{ /*año de las peliculas en todos los html*/
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     text-align: center;
     margin: 0;
+    color: black;
 }
 
 .cards{ /*para poner una pelicula al lado de la otra en la primer fila*/
@@ -172,6 +132,48 @@ li a { /*todos los html (nav)*/
     margin-top: 40px;
 }
 
+
+/*CSS de detalle de series y peliculas*/
+.padre{ 
+    display: flex;
+
+}
+.hijo2{
+    margin-left: 10px;
+} 
+    
+.miul{
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;  
+}
+
+.miul li{
+    font-size: 25px;
+}
+
+.portadatom{
+    height: 58vh;
+    width: 41vh;
+    border-radius: 25px;
+}
+
+.titulotomfriends{
+    margin-left: 101px;
+    font-size: 30px;
+}
+
+.titulotomgru{
+margin-left: 56px;
+}
+
+.trailer{
+    color: red;
+    font-size: 50px;    
+}
+
+/*CSS html de generos*/
 .generosPeliculas{
     display: flex;
 }
@@ -199,6 +201,10 @@ li a { /*todos los html (nav)*/
     box-shadow:5px 10px rgb(243, 202, 162);
 }
 
+.boxGeneros:hover {
+    height: 40px;
+    width: 240px;
+}
 .titulosGeneros{
     text-align: center;
     font-size: 20px;
@@ -209,7 +215,13 @@ li a { /*todos los html (nav)*/
     color: black;
 }
 
-/* CSS de Favorite*/
+.variostitulosprincipales{
+    font-size: 30px;
+    background-color:rgba(186, 145, 104, 0.53);
+}
+
+
+/* CSS de Favorite, search y detalle de generos*/
 .conteiner{
     display: flex;
     flex-direction: row;
@@ -220,13 +232,13 @@ li a { /*todos los html (nav)*/
     border-radius: 8px;
 }
 
-.tituloAlvin {
+.tituloAlvin { /*titulos de las peliculas de los html de favoritos, search y detalle de generos*/
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-size: 22px;
     margin-top: 3px;
 }
-.alvin1{
+.alvin1{ /*foto de las portadas de los html de favoritos, search y detalle de generos*/
     height: 280px;
     align-self: center;
     width: 230px;
@@ -234,8 +246,7 @@ li a { /*todos los html (nav)*/
     display: flex;
 }
 
-
-.itemalvin1{
+.portadaFavoritos{ /*este sirve para el html de favoritos, de search y detalle de generos*/
     height: 420px;
     width: 290px;
     background-color:rgb(186, 145, 104);
@@ -247,45 +258,19 @@ li a { /*todos los html (nav)*/
     justify-content: center;
 }
 
-.fav{
-    background-color:rgb(186, 145, 104);
+.alvin1:hover{
+    height: 330px;
+    width: 270px;
+}
+.ocultar { /*solo afecta al html de search*/
+    display: none;
 }
 
-/*CSS Search */
 
-.conteiner_search{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around; 
-    border: 15px;
-    height: 650px;
-}
-
-.alvin1{
-    height: 290px;
-    align-self: center;
-    border-radius: 15px;
-}
-
-.item_search{
-    height: 420px;
-    width: 290px;
-    background-color:rgb(186, 145, 104);
-    border-radius: 8px;
-    box-shadow:5px 10px rgb(243, 202, 162);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
+/*CSS del footer de todos los html*/
 .footer{
     font-size: 15px;
-    text-align: right;
+    text-align: center;
     font-family: 'Oswald', sans-serif;
 }
 
-.ocultar {
-    display: none;
-}
