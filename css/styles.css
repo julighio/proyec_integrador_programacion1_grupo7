@@ -6,7 +6,7 @@ body{ /*todos los html*/
 }
 .padre{ /*detail-movie*/
     display: flex;
-    
+
 }
 .hijo2{
     margin-left: 10px;
@@ -14,10 +14,13 @@ body{ /*todos los html*/
     
 .miul{
     height: 420px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .miul li{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 
@@ -28,9 +31,16 @@ body{ /*todos los html*/
 }
 .titulotomfriends{
     margin-left: 101px;
+    font-size: 30px;
 }
 .titulotomgru{
 margin-left: 56px;
+}
+.trailer{
+    color: red;
+    font-size: 50px;
+   
+    
 }
 
 ul { /*todos los html (nav)*/
@@ -42,6 +52,9 @@ ul { /*todos los html (nav)*/
     height: 80px;
   }
   
+.generoComedia{
+    
+}
 
 li a { /*todos los html (nav)*/
     display: block;
