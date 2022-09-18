@@ -77,7 +77,7 @@ li a { /*todos los html (nav)*/
 
 
 .portadaCard{ /*bloque del cuadrado de las peliculas en index*/
-    height: 420px;
+    height: 443px;
     width: 250px;
     background-color:rgb(186, 145, 104);
     margin-left:30px;
@@ -161,7 +161,8 @@ li a { /*todos los html (nav)*/
 
 .titulotomfriends{
     margin-left: 101px;
-    font-size: 30px;
+    font-size: 50px;
+    margin-top: 0%;
 }
 
 .titulotomgru{
@@ -268,9 +269,16 @@ margin-left: 56px;
 
 
 /*CSS del footer de todos los html*/
+.padreFooter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .footer{
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
+    margin-left: 750px;
 }
+
 
