@@ -1,7 +1,10 @@
 body{ /*todos los html*/
     height: 100%;
     width: 100%;
-    background-color: rgb(83, 83, 83);
+    background: #3A1C71;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 
 
@@ -263,8 +266,12 @@ margin-left: 56px;
     justify-content: center;
 }
 
-.fav{
-    background-color:darkgray;
+.alvin1:hover{
+    height: 330px;
+    width: 270px;
+}
+.ocultar { /*solo afecta al html de search*/
+    display: none;
 }
 
 
@@ -272,23 +279,11 @@ margin-left: 56px;
 .padreFooter{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around; 
-    background-color:darkgrey;
-    border: 15px;
-    height: 650px;
-}
-
-.alvin_search{
-    height: 290px;
-    align-self: center;
-}
-
-.item_search{
     align-items: center;
 }
 .footer{
     font-size: 20px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
+    margin-left: 750px;
 }
