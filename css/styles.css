@@ -1,23 +1,25 @@
 body{ /*todos los html*/
     height: 100%;
     width: 100%;
+    background-color: rgb(83, 83, 83);
 }
 
 
 /*CSS del nav*/
-ul { /*todos los html (nav)*/
+.todoelnav { /*todos los html (nav)*/
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     border-radius: 10px;
-    height: 80px;
+    height: 120px;
+    background-color: black;
   }
   
 
 li a { /*todos los html (nav)*/
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     font-size: 20px;
@@ -27,22 +29,22 @@ li a { /*todos los html (nav)*/
 }
 .home{ /*todos los html (nav)*/
     margin-left: -305px;
-    margin-top: 13px;
+    margin-top: 30px;
 }
 .generos{ /*todos los html (nav)*/
     margin-left: -185px;
-    margin-top: 13px;
+    margin-top: 30px;
 }
 
 .favorite{ /*todos los html (nav)*/
     margin-left: -45px;
-    margin-top: 13px;
+    margin-top: 30px;
 }
 .logo{ /*todos los html (nav)*/
     width: 16%;
     height: 16%;
     margin-left: -70%;
-    margin-top: -2%;
+    margin-top: 0%;
     border-radius: 100px;
 }
 
@@ -50,9 +52,9 @@ li a { /*todos los html (nav)*/
     
     width: 220px;
     height: 30px;
-    margin-top: 18px;
+    margin-top: 40px;
     margin-left: 500px;
-    background-color:antiquewhite;
+    background-color:darkgray;
     border-radius: 25px;
     color: darkgray;
     text-align:left;
@@ -63,7 +65,6 @@ li a { /*todos los html (nav)*/
 .titulo{ /*los titulos principales de la home page*/
     font-family: 'Roboto', sans-serif;
     margin-left: 40px;
-    background-color:antiquewhite;
     font-size: 30px;
 }
 
@@ -71,7 +72,6 @@ li a { /*todos los html (nav)*/
     font-family: 'Roboto', sans-serif;
     margin-left: 40px;
     margin-top:50px;
-    background-color:antiquewhite;
     font-size: 30px;
 }
 
@@ -79,7 +79,7 @@ li a { /*todos los html (nav)*/
 .portadaCard{ /*bloque del cuadrado de las peliculas en index*/
     height: 443px;
     width: 250px;
-    background-color:rgb(186, 145, 104);
+    background-color:black;
     margin-left:30px;
     border-radius: 8px;
     box-shadow:5px 10px rgb(243, 202, 162);
@@ -107,7 +107,7 @@ li a { /*todos los html (nav)*/
     margin-top: 3px;
     text-align: center;
     margin-bottom: 0;
-    color: black;
+    color: white;
 }
 
 .texto-año{ /*año de las peliculas en todos los html*/
@@ -115,7 +115,7 @@ li a { /*todos los html (nav)*/
     font-size: 20px;
     text-align: center;
     margin: 0;
-    color: black;
+    color: white;
 }
 
 .cards{ /*para poner una pelicula al lado de la otra en la primer fila*/
@@ -174,6 +174,11 @@ margin-left: 56px;
     font-size: 50px;    
 }
 
+.generoitem{ /* Sacarle el color y el subrayado al link del genero*/
+    text-decoration: none;
+    color: black;
+}
+
 /*CSS html de generos*/
 .generosPeliculas{
     display: flex;
@@ -196,7 +201,7 @@ margin-left: 56px;
 .boxGeneros{
     height: 50px;
     width: 250px;
-    background-color:rgb(186, 145, 104);
+    background-color:black;
     margin-left:30px;
     border-radius: 8px;
     box-shadow:5px 10px rgb(243, 202, 162);
@@ -213,12 +218,11 @@ margin-left: 56px;
     float: center;
     display: block;
     padding: 14px 16px;
-    color: black;
+    color: rgb(186, 145, 104);
 }
 
 .variostitulosprincipales{
     font-size: 30px;
-    background-color:rgba(186, 145, 104, 0.53);
 }
 
 
@@ -250,7 +254,7 @@ margin-left: 56px;
 .portadaFavoritos{ /*este sirve para el html de favoritos, de search y detalle de generos*/
     height: 420px;
     width: 290px;
-    background-color:rgb(186, 145, 104);
+    background-color:black;
     border-radius: 8px;
     box-shadow:5px 10px rgb(243, 202, 162);
     display: flex;
