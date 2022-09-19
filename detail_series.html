@@ -6,27 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href=".//imagenes/favicon.png" type="image/x-icon">
     <title>Detail series page</title>
     
 </head>
-<body>
+<body class="elBodyDeFriends">
     <header>
         <nav class="menu">
-        <ul>
+        <ul class="todoelnav">
             <li> <a> <img class="logo" src="./imagenes/logo.png"> </a></li>
             <li> <a class="home" href="index.html">Home</a> </li>
-            <li> <a class= "generos" href="generos.html"> Generos</a> </li>
+            <li> <a class= "generos" href="generos.html"> Géneros</a> </li>
             <li> <a class= "favorite" href="favorite.html">Favoritos</a></li>
-            <li> <a class="buscador" href="search-results.html">Buscar...</a></li>
+            <li> <form action="./search-results.html" method="GET" class="input">
+                <input type="search" name="busqueda" placeholder="..." class="buscador">
+                    <input type="submit" value="Buscar" class="botonBuscador">
+            </form></li>
         </ul>
         </nav>
 
 
     </header>
-<footer>
-    <p class="footer">Julia Ghio Rivas, Benjamin Grondona y Tomas Hartenstein</p>
-</footer>
+    <br><br><br><br><br>
+    <main>
+        <section class="padre">
+            <article class="hijo">
+            <img class="portadatom" src="../proyec_integrador_programacion1_grupo7/imagenes/friends.jpeg" alt="">
+            </ul> </article>
+        
+            <article class="hijo2">
+                <strong><u><h2 class="titulotomfriends"> Friends</h2></u></strong>
+
+                <ul class="miul">
+
+                    <u><li>Calificación: </u> <img src="../proyec_integrador_programacion1_grupo7/imagenes/CalificacionGru.png" alt=""></li>
+
+                    <br>
+
+                    <u><li>Fecha de estreno:</u> 22 de septiembre de 1994</li>
+
+                    <br>
+
+                    <u><li>Duracion:</u> 10 temporadas</li>
+
+                    <br>
+
+                    <li><u>Sinopsis:</u> 
+                    Friends nos contaba las peripecias de un grupo de amigos que viven en Manhattan (Nueva York), ellos eran Monica Geller, su hermano Ross Geller, Rachel Green una amiga de la infancia, sus vecinos Chandler Bing y Joey Tribbiani y otra amiga, Phoebe Buffay.</li>
+                    <br>
+
+                    <a class= "generoitem" href="./detail_genero.html">
+                        <li><u>Genero:</u> Comedia</li>
+                    </a>
+
+                    <li> <a class="trailer" href="https://youtu.be/IEEbUzffzrk"><u>Ver trailer</u></a></li>
+
+                </ul>
+            </article>
+        </section>
+    </main>
+    <br> 
+    <br> 
+    <br> 
+    <br>
+    <footer class="padreFooter">
+        <img src="../proyec_integrador_programacion1_grupo7/imagenes/DigitalHouse.png" alt="">
+        <p class="footer">| Julia Ghio Rivas, Benjamin Grondona <br> y Tomas Hartenstein |</p>
+    </footer>
+    
 </body>
 </html>

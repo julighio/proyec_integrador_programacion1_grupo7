@@ -7,26 +7,64 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href=".//imagenes/favicon.png" type="image/x-icon">
     <title>Detail Genre page</title>
     
 </head>
 <body>
     <header>
         <nav class="menu">
-        <ul>
+        <ul class="todoelnav">
             <li> <a> <img class="logo" src="./imagenes/logo.png"> </a></li>
             <li> <a class="home" href="index.html">Home</a> </li>
-            <li> <a class= "generos" href="generos.html"> Generos</a> </li>
+            <li> <a class= "generos" href="generos.html"> Géneros</a> </li>
             <li> <a class= "favorite" href="favorite.html">Favoritos</a></li>
-            <li> <a class="buscador" href="search-results.html">Buscar...</a></li>
+            <li> <form action="./search-results.html" method="GET" class="input">
+                <input type="search" name="busqueda" placeholder="..." class="buscador">
+                    <input type="submit" value="Buscar" class="botonBuscador">
+            </form></li>
         </ul>
         </nav>
 
 
     </header>
-<footer>
-    <p class="footer">Julia Ghio Rivas, Benjamin Grondona y Tomas Hartenstein</p>
-</footer>
+    <main>
+        <h1 class="variostitulosprincipales"><em>Género:</em> COMEDIA</h1>
+        
+        <section class="conteiner">
+            <article class="portadaFavoritos"> 
+                <a href="./detail_series.html">
+                    <img class= "alvin1" src="./imagenes/friends.jpeg" alt="">
+                    <h3 class="texto-info">Friends</h3>
+                    <p class="texto-año">1994</p>
+                </a>
+            </article>
+
+            <article class="portadaFavoritos"> 
+                <a href="./detail_movie.html">
+                    <img class= "alvin1" src= "./imagenes/soncomoniños.jpeg" alt="">
+                    <h3 class="texto-info">Son como Niños</h3>
+                    <p class="texto-año">2010</p>
+                </a>
+            </article>
+
+            <article class="portadaFavoritos"> 
+                <a href="./detail_movie.html">
+                    <img class= "alvin1" src="./imagenes/alvin.webp" alt="">
+                    <h3 class="texto-info">Alvin y las ardillas</h3>
+                    <p class="texto-año">2008</p>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="padreFooter">
+        <img src="../proyec_integrador_programacion1_grupo7/imagenes/DigitalHouse.png" alt="">
+        <p class="footer">| Julia Ghio Rivas, Benjamin Grondona <br> y Tomas Hartenstein |</p>
+    </footer>
 </body>
 </html>

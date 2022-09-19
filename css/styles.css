@@ -1,28 +1,25 @@
-
-
 body{ /*todos los html*/
     height: 100%;
     width: 100%;
-}
-.padre{ /*detail-movie*/
-    display: flex;
-    align-self: center;
-    align-items: center;
+    background-color: rgb(83, 83, 83);
 }
 
-ul { /*todos los html (nav)*/
+
+/*CSS del nav*/
+.todoelnav { /*todos los html (nav)*/
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     border-radius: 10px;
-    height: 80px;
+    height: 120px;
+    background-color: black;
   }
   
 
 li a { /*todos los html (nav)*/
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     font-size: 20px;
@@ -32,77 +29,93 @@ li a { /*todos los html (nav)*/
 }
 .home{ /*todos los html (nav)*/
     margin-left: -305px;
-    margin-top: 13px;
+    margin-top: 30px;
 }
 .generos{ /*todos los html (nav)*/
     margin-left: -185px;
-    margin-top: 13px;
+    margin-top: 30px;
 }
 
 .favorite{ /*todos los html (nav)*/
     margin-left: -45px;
-    margin-top: 13px;
+    margin-top: 30px;
 }
 .logo{ /*todos los html (nav)*/
     width: 16%;
     height: 16%;
     margin-left: -70%;
-    margin-top: -2%;
+    margin-top: 0%;
     border-radius: 100px;
 }
 
 .buscador{ /*todos los html (nav)*/
     
     width: 220px;
-    height: 15px;
-    margin-top: 18px;
+    height: 30px;
+    margin-top: 40px;
     margin-left: 500px;
-    background-color:antiquewhite;
+    background-color:darkgray;
     border-radius: 25px;
     color: darkgray;
     text-align:left;
-
-
 }
 
+
+/*CSS de index*/
 .titulo{ /*los titulos principales de la home page*/
     font-family: 'Roboto', sans-serif;
     margin-left: 40px;
+    font-size: 30px;
 }
 
-.titulo2{ /*los titulos principales de la home page*/
+.titulo2y3{ /*los titulos principales de la home page y de la pagina de generos*/
     font-family: 'Roboto', sans-serif;
     margin-left: 40px;
     margin-top:50px;
+    font-size: 30px;
 }
 
-.titulo3{ /*los titulos principales de la home page*/
-    font-family: 'Roboto', sans-serif;
-    margin-left: 40px;
-    margin-top:50px;
-}
 
-.portadaCard{ /*bloque del cuadrado de las peliculas*/
-    height: 380px;
+.portadaCard{ /*bloque del cuadrado de las peliculas en index*/
+    height: 443px;
     width: 250px;
-    background-color:rgb(186, 145, 104);
+    background-color:black;
     margin-left:30px;
     border-radius: 8px;
     box-shadow:5px 10px rgb(243, 202, 162);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.portada{ /*foto de las peliculas*/
+.portada{ /*foto de las peliculas en index*/
     height: 300px;
-    width: 200px;
+    width: 180px;
     margin-top: 20px;
-    margin-left:23px;
     border-radius: 15px;
+    display: flex;
 }
 
-.texto-info{ /*titulo de las peliculas*/
+.portada:hover{ /*para que se agrande la imagen cuando pasas el mouse por arriba*/
+    width: 200px;
+    height: 350px;
+}
+
+.texto-info{ /*titulo de las peliculas en todos los html*/
     font-family: 'Oswald', sans-serif;
     font-size: 30px;
     margin-top: 3px;
     text-align: center;
+    margin-bottom: 0;
+    color: white;
+}
+
+.texto-año{ /*año de las peliculas en todos los html*/
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    color: white;
 }
 
 .cards{ /*para poner una pelicula al lado de la otra en la primer fila*/
@@ -119,6 +132,54 @@ li a { /*todos los html (nav)*/
     margin-top: 40px;
 }
 
+
+/*CSS de detalle de series y peliculas*/
+.padre{ 
+    display: flex;
+
+}
+.hijo2{
+    margin-left: 10px;
+} 
+    
+.miul{
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;  
+}
+
+.miul li{
+    font-size: 25px;
+}
+
+.portadatom{
+    height: 58vh;
+    width: 41vh;
+    border-radius: 25px;
+}
+
+.titulotomfriends{
+    margin-left: 101px;
+    font-size: 50px;
+    margin-top: 0%;
+}
+
+.titulotomgru{
+margin-left: 56px;
+}
+
+.trailer{
+    color: red;
+    font-size: 50px;    
+}
+
+.generoitem{ /* Sacarle el color y el subrayado al link del genero*/
+    text-decoration: none;
+    color: black;
+}
+
+/*CSS html de generos*/
 .generosPeliculas{
     display: flex;
 }
@@ -140,12 +201,16 @@ li a { /*todos los html (nav)*/
 .boxGeneros{
     height: 50px;
     width: 250px;
-    background-color:rgb(186, 145, 104);
+    background-color:black;
     margin-left:30px;
     border-radius: 8px;
     box-shadow:5px 10px rgb(243, 202, 162);
 }
 
+.boxGeneros:hover {
+    height: 40px;
+    width: 240px;
+}
 .titulosGeneros{
     text-align: center;
     font-size: 20px;
@@ -153,50 +218,58 @@ li a { /*todos los html (nav)*/
     float: center;
     display: block;
     padding: 14px 16px;
-    color: black;
+    color: rgb(186, 145, 104);
 }
 
-/* CSS de Favorite*/
+.variostitulosprincipales{
+    font-size: 30px;
+}
+
+
+/* CSS de Favorite, search y detalle de generos*/
 .conteiner{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around; 
-    
     border: 15px;
     height: 650px;
     border-radius: 8px;
 }
 
-.tituloAlvin {
+.tituloAlvin { /*titulos de las peliculas de los html de favoritos, search y detalle de generos*/
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-size: 22px;
+    margin-top: 3px;
 }
-.alvin1{
-    height: 290px;
+.alvin1{ /*foto de las portadas de los html de favoritos, search y detalle de generos*/
+    height: 280px;
     align-self: center;
+    width: 230px;
     border-radius: 15px;
+    display: flex;
 }
 
-.item{
-    align-items: center;
-    background-color:rgb(186, 145, 104);
-    margin: 35px;
-    padding: 35px;
-    width: 210px;
-    height: 330px;
-    box-shadow:5px 10px rgb(243, 202, 162);
+.portadaFavoritos{ /*este sirve para el html de favoritos, de search y detalle de generos*/
+    height: 420px;
+    width: 290px;
+    background-color:black;
     border-radius: 8px;
+    box-shadow:5px 10px rgb(243, 202, 162);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .fav{
     background-color:darkgray;
 }
 
-/*CSS Search */
 
-.conteiner_search{
+/*CSS del footer de todos los html*/
+.padreFooter{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -213,16 +286,9 @@ li a { /*todos los html (nav)*/
 
 .item_search{
     align-items: center;
-    background-color:rgb(186, 145, 104);
-    margin: 35px;
-    padding: 35px;
-    width: 210px;
-    height: 330px;
-    box-shadow:5px 10px rgb(243, 202, 162);
 }
-
 .footer{
-    font-size: 15px;
-    text-align: right;
+    font-size: 20px;
+    text-align: center;
     font-family: 'Oswald', sans-serif;
 }
