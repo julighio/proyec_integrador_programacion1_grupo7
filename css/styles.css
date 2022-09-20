@@ -270,7 +270,7 @@ margin-left: 56px;
     justify-content: center;
 }
 
-.alvin1:hover{
+.alvin1:hover{ 
     height: 330px;
     width: 270px;
 }
@@ -295,14 +295,14 @@ margin-left: 56px;
 /* responsive con media queris*/
 
 @media (max-width: 420px) { 
-    body{
+    body{ /*todos los html*/
         height: 100%;
         width: 100%;
         background: #3A1C71;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to top, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
         background-repeat: no-repeat;
     }
-
+    /*CSS del nav*/
     .todoelnav {
         height: 160px;
         width: fit-content;
@@ -335,7 +335,7 @@ margin-left: 56px;
         margin-top: 20px;
         margin-left: 30px;
     }
-
+    /*CSS del index*/
     .titulo{
         margin-left: 20px;
         font-size: 15px;
@@ -348,13 +348,7 @@ margin-left: 56px;
 
     }
 
-    .cards{ /*para poner una pelicula al lado de la otra en la primer fila*/
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    .portadaCard {
+    .portadaCard { /*Bloque de las peliculas*/
         height: 220px;
         width: 125px;
         margin-left: 15px;
@@ -364,11 +358,9 @@ margin-left: 56px;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-
-
     }
 
-    .portada{
+    .portada{ /*Portada (foto) de las peliculas*/
         height: 160px;
         width: 100px;
         margin-top: 10px;
@@ -386,6 +378,13 @@ margin-left: 56px;
 
     }
 
+    .cards{ /*para poner una pelicula al lado de la otra en la primer fila*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
     .cards2{
         margin-top: 20px;
         display: flex;
@@ -401,7 +400,8 @@ margin-left: 56px;
         align-items: center;
 
     }
-
+    
+    /*CSS detalle de peliculas y series*/
     .padre {
         display: flex;
         flex-direction: column;
@@ -423,11 +423,12 @@ margin-left: 56px;
 
     }
 
-    .imgcalificacion{
-        height: 10px;
-    }
     .miul li {
         font-size: 15px;
+    }
+
+    .portadatom{
+        margin-left: 90px;
     }
 
     .titulotomfriends{
@@ -442,14 +443,15 @@ margin-left: 56px;
 
     }
 
-    .portadatom{
-        margin-left: 90px;
+    .imgcalificacion{
+        height: 10px;
     }
 
     .trailer{
         font-size: 20px;
     }
 
+    /*CSS html de generos*/
     .generosPeliculas2{
         margin-top: 20px;
     }
@@ -476,7 +478,7 @@ margin-left: 56px;
         font-size: 25px;
 
     }
-
+    /*CSS de favorite, search y detalle de generos*/
     .conteiner{
         display: flex;
         flex-direction: column;
@@ -499,7 +501,7 @@ margin-left: 56px;
         flex-direction: column;
 
     }
-
+    /*CSS del footer de todos los html*/
     .footer{
         font-size: 8px;
         margin-left: 250px;
