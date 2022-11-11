@@ -275,7 +275,7 @@ margin-left: 56px;
     width: 270px;
 }
 .ocultar { /*solo afecta al html de search*/
-    display: none;
+    display: none; 
 }
 
 
