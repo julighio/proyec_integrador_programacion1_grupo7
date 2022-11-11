@@ -1,24 +1,8 @@
-// PUNTO 1, modificando el buscador y sus especificaciones
-let buscador = document.querySelector(".formulario");
-let resultadoBusqueda = document.querySelector(".buscador");
 let container=document.querySelector(".cards");  // linkearlo a nuestro "container"
-
-buscador.addEventListener("submit", function(e) {
-    e.preventDefault();
-    if (resultadoBusqueda.value == ''){
-        alert("Esta vacío. Ingrese una busueda");
-    }
-    else if (resultadoBusqueda.value.length<3){
-        alert("Tiene que contener al menos 3 caracteres")
-    }else {
-        this.submit();
-    } 
-});
 
 let apiKey= "371e304b1b9f8df6a3f0e225dc4511b7"
 let urlSeries= `https://api.themoviedb.org/3/tv/{tv_id}?api_key=${apiKey}&language=en-US`
 let urlPelis= ` https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&page=1&include_adult=false`
-let resultadoDeBusqueda= ".resultadoDeBusqueda"
 
 fetch(urlPelis)
 .then(function (respuesta) {
