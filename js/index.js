@@ -26,7 +26,7 @@ fetch(urlSugerencias)
         let fecha = data.results[i].release_date
 
         sugerencias += `<article class="portadaCard">
-                        <a href="./detail_series.html?idPersonaje=${id}">
+                        <a href="./detail_movie.html?idPersonaje=${id}">
                         <img class= "portada" src= "https://image.tmdb.org/t/p/w500/${imagenes}">
                         <p > Titulo: ${titulo}</p>
                         <p>Fecha : ${fecha}</p>
@@ -57,7 +57,7 @@ fetch(urlSugerencias)
         let fecha = data.results[i].release_date
 
         movies += `<article class="portadaCard">
-                        <a href="./detail_series.html?idPersonaje=${id}">
+                        <a href="./detail_movie.html?idPersonaje=${id}">
                         <img class= "portada" src= "https://image.tmdb.org/t/p/w500/${imagenes}">
                         <p > Titulo: ${titulo}</p>
                         <p>Fecha : ${fecha}</p>
@@ -83,13 +83,13 @@ let series='';
 for (let i=0; i<5; i++){
     console.log(data);
 
-    let titulo = data.results[i].title
+    let titulo = data.results[i].name
     let imagenes = data.results[i].poster_path
     let id = data.results[i].id
-    let fecha = data.results[i].release_date
+    let fecha = data.results[i].first_air_date
 
     series += `<article class="portadaCard">
-                    <a href="./detail_series.html?idPersonaje=${id}">
+                    <a href="./detail_series.html?idPersonajes=${id}">
                     <img class= "portada" src= "https://image.tmdb.org/t/p/w500/${imagenes}">
                     <p > Titulo: ${titulo}</p>
                     <p>Fecha : ${fecha}</p>
