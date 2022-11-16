@@ -17,6 +17,7 @@ fetch(urlSugerencias)
 .then(function (data) {
 
     let sugerencias=''; 
+    console.log(data)
     for (let i=0; i<5; i++){
         console.log(data.results[i]);
 
