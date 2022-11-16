@@ -100,10 +100,6 @@ fetch(urlVerMas)
             e.preventDefault();
 
         }
-        
-        
-
-
     )}
     verMas.innerHTML=listaVerMas;
     return data
