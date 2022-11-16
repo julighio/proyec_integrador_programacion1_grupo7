@@ -17,7 +17,7 @@ let verMas = document.querySelector('.verMas')
 let apiKey= "371e304b1b9f8df6a3f0e225dc4511b7"
 let urlDetallePelicula = `https://api.themoviedb.org/3/movie/${pelicula}?api_key=${apiKey}&language=en-US`
 let urlDondeVerPelicula = `https://api.themoviedb.org/3/movie/${pelicula}/watch/providers?api_key=<${apiKey}`
-let urlVerMas = ``
+let urlVerMas = `https://api.themoviedb.org/3/movie/${pelicula}/recommendations?api_key=${apiKey}&language=en-US&page=1`
 
 
 fetch(urlDetallePelicula)
@@ -87,6 +87,29 @@ fav.addEventListener("click", function(e) {
     localStorage.setItem("favoritos", favsToString )
 })
 
+fetch(urlVerMas)
+.then(function (respuesta) {
+    return respuesta.json()
+})
+.then(function (data) {
+    console.log(data) 
+    let listaVerMas=''; 
+    for (let i=0; i<3; i++){
+        console.log(data.results[i]);
+        verMas.addEventListener('click', function(e){
+            e.preventDefault();
+
+        }
+        
+        
 
 
+    )}
+    verMas.innerHTML=listaVerMas;
+    return data
+})
+.catch(function (error) {
+    console.log(error);
+    return error
+})
 
