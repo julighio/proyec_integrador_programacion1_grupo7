@@ -12,6 +12,7 @@ let genero = document.querySelector('.generoItem')
 
 let apiKey= "371e304b1b9f8df6a3f0e225dc4511b7"
 let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${serie}?api_key=${apiKey}&language=en-US`
+let urlDondeVerSerie= `https://api.themoviedb.org/3/tv/${serie}/watch/providers?api_key=${apiKey}`
 
 fetch(urlDetalleSerie)
 .then(function (respuesta) {
