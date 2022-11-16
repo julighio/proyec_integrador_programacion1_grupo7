@@ -8,8 +8,9 @@ let titulo = document.querySelector('.tituloOriginal');
 let calificacion = document.querySelector('.calificacion');
 let fecha = document.querySelector('.fechaEstreno');
 let duracion = document.querySelector('.duracion');
-let sinopsis = document.querySelector('.sinopsis')
-let genero = document.querySelector('.genero')
+let sinopsis = document.querySelector('.sinopsis');
+let genero = document.querySelector('.genero');
+let portada = document.querySelector("portadatom");
 
 let apiKey= "371e304b1b9f8df6a3f0e225dc4511b7"
 let urlDetallePelicula = `https://api.themoviedb.org/3/movie/${pelicula}?api_key=${apiKey}&language=en-US`
@@ -27,11 +28,12 @@ fetch(urlDetallePelicula)
     }
     console.log(generosPeliculas)
     titulo.innerText=data.original_title;
-    calificacion.innerText=data.vote_average;
+    calificacion.innerText= data.vote_average;
     fecha.innerText=data.release_date;
     duracion.innerText=data.runtime;
     sinopsis.innerText=data.overview;
     genero.innerHTML=generosPeliculas;
+
 
     return data
 })
@@ -39,4 +41,6 @@ fetch(urlDetallePelicula)
     console.log(error);
     return error
 })
+
+fetch().then().then().catch()
 
