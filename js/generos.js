@@ -21,7 +21,7 @@ fetch(urlgenerospelis)
         let id = data.genres[i].id;
         
         primerosgeneros += ` <article class="boxGeneros">
-        <a class="titulosGeneros" href="./detail_genero.html?detallegenero=${tipo}">${tipo}</a>
+        <a class="titulosGeneros" href="./detail_genero.html?detallegenero=${id}">${tipo}</a>
         </article>`
     }
     sectionpelis.innerHTML= primerosgeneros;
@@ -48,10 +48,11 @@ fetch(urlgenerosseries)
         console.log(data.genres[i]);
         
         let tipo= data.genres[i].name;
+        let id= data.genres[i].id;
         
         segundosgeneros += ` <section class="generosSeries">
         <article class="boxGeneros">
-            <a class="titulosGeneros" href="./detail_genero.html?detallegenero=${tipo}">${tipo}</a>
+            <a class="titulosGeneros" href="./detail_genero.html?detallegenero=${id}">${tipo}</a>
         </article>`
     }
     sectionseries.innerHTML= segundosgeneros;
