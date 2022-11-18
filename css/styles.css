@@ -297,6 +297,11 @@ margin-left: 56px;
     flex-direction: row;
 }
 
+#recom{
+    display: flex;
+    flex-direction: row;
+}
+
 /* responsive con media queris*/
 
 @media (max-width: 420px) { 
