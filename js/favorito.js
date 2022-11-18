@@ -7,13 +7,22 @@ if (favoritos.length == 0){
     section.innerHTML = "No hay lista de favoritos aún"
     
 } else {
-    for (let i =0; < favoritos.length; i++) {
+    for (let i =0; i< favoritos.length; i++) {
 
     /* Abro fetch */
     fetch()
-    .then()
-    .then()
-    .catch()
+    .then (function (respuesta) {
+        return respuesta.json()
+    })
+    .then(function (data){
+        console.log(data)
+
+    return data
+    })
+    .catch(function (error) {
+        console.log(error);
+        return error
+    })
     }
 }
 
