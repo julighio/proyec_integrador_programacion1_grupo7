@@ -21,7 +21,7 @@ fetch(urlgenerospelis)
         let id = data.genres[i].id;
         
         primerosgeneros += ` <article class="boxGeneros">
-        <a class="titulosGeneros" href="./detail_genero.html?detallegenero=${id}">${tipo}</a>
+        <a class="titulosGeneros" href="./detail_genero.html?detallegenero=${id}&name=${tipo}">${tipo}</a>
         </article>`
     }
     sectionpelis.innerHTML= primerosgeneros;
