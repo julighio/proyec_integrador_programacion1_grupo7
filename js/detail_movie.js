@@ -31,7 +31,8 @@ fetch(urlDetallePelicula)
     for (let i = 0; i < data.genres.length; i++) {
         generosPeliculas += `<ol><a class= "genero" href="./detail_genero.html">${data.genres[i].name}</a> </ol>`
     }
-    let portada = `<img class="portadatom" src="https://image.tmdb.org/t/p/w500/${data.poster_path} " alt="">`
+    let portada = `<img class="portadatom" src="https://image.tmdb.org/t/p/w500/${data.poster_path} alt="">`
+   
     console.log(generosPeliculas)
     titulo.innerText= data.original_title;
     calificacion.innerText="Calificacion: " + data.vote_average;
