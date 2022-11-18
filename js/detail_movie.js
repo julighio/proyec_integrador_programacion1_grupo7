@@ -4,7 +4,6 @@ let qsObj = new URLSearchParams(qs);
 let pelicula = qsObj.get("idPersonaje");
 
 let titulo = document.querySelector('.tituloOriginal');
-// let imagen = document.querySelector('.portadatom') --> no sabemos como hacer aparecer la imagen
 let calificacion = document.querySelector('.calificacion');
 let fecha = document.querySelector('.fechaEstreno');
 let duracion = document.querySelector('.duracion');
@@ -12,16 +11,16 @@ let sinopsis = document.querySelector('.sinopsis');
 let genero = document.querySelector('.genero');
 let portadaPelicula = document.querySelector(".portadatom");
 let fav=document.querySelector(".botonFav");
-let verMas = document.querySelector('.verMas')
+let verMas = document.querySelector('.verMas');
 let rec = document.querySelector('#reco');
-let span = document.querySelector('span');
+let dondeVer=document.querySelector('.dondeVer');
 
 let apiKey= "371e304b1b9f8df6a3f0e225dc4511b7"
 let urlDetallePelicula = `https://api.themoviedb.org/3/movie/${pelicula}?api_key=${apiKey}&language=en-US`
-let urlDondeVerPelicula = `https://api.themoviedb.org/3/movie/${pelicula}/watch/providers?api_key=<${apiKey}`
+let urlDondeVerPelicula = `https://api.themoviedb.org/3/movie/${pelicula}/watch/providers?api_key=${apiKey}`
 let urlVerMas = `https://api.themoviedb.org/3/movie/${pelicula}/recommendations?api_key=${apiKey}&language=en-US&page=1`
 
-
+/* Fetch del detalle de cada pregunta*/
 fetch(urlDetallePelicula)
 .then(function (respuesta) {
     return respuesta.json()
@@ -52,21 +51,22 @@ fetch(urlDetallePelicula)
     return error
 })
 
-
-/* este es el fetch de recomendaciones */
-
-
-
-/*fetch(urlDondeVerPelicula)
+/* Muestra dnde se pueden ver las peliculas*/ 
+fetch(urlDondeVerPelicula)
 .then(function(respuesta) {
     return respuesta.json()
 })
 .then(function(data) {
-    console.log(data)
-    
+    console.log("WATCH",data)
+    let dondeVerPeli  = '';
+    for (let i = 0; i < data.results.US.rent.length; i++) {
+        dondeVerPeli += `<li class= "dondeVer"> ${data.results.US.rent[i].provider_name} </li>`
+    }
+    dondeVer.innerHTML+=dondeVerPeli
 })
-.catch() */
+.catch() 
 
+/* Boton de favoritos*/
 let favoritos=[]
 
 let recuperoStorage = localStorage.getItem("favoritos")
@@ -95,9 +95,8 @@ fav.addEventListener("click", function(e) {
     localStorage.setItem("favoritos", favsToString )
 })
 
-verMas.addEventListener("click", function(e) {
-    e.preventDefault();
-    fetch(urlVerMas)
+/* Recomendaciones, fetch + evento*/
+fetch(urlVerMas)
 .then(function (respuesta) {
     return respuesta.json()
 })
@@ -122,6 +121,20 @@ verMas.addEventListener("click", function(e) {
     console.log(error);
     return error
 })
-})
 
+let mostrarRec = false;
+
+verMas.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (mostrarRec) {
+        rec.style.display="none";
+        verMas.innerText="Ver recomendaciones";
+        mostrarRec=false;
+    } else {
+        rec.style.display="flex";
+        verMas.innerText="Ocultar recomendaciones";
+        mostrarRec=true;
+
+    }
+})
 
