@@ -292,6 +292,11 @@ margin-left: 56px;
     margin-left: 750px;
 }
 
+#reco{
+    display: flex;
+    flex-direction: row;
+}
+
 /* responsive con media queris*/
 
 @media (max-width: 420px) { 

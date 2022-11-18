@@ -13,6 +13,8 @@ let genero = document.querySelector('.genero');
 let portadaPelicula = document.querySelector(".portadatom");
 let fav=document.querySelector(".botonFav");
 let verMas = document.querySelector('.verMas')
+let rec = document.querySelector('#reco');
+let span = document.querySelector('span');
 
 let apiKey= "371e304b1b9f8df6a3f0e225dc4511b7"
 let urlDetallePelicula = `https://api.themoviedb.org/3/movie/${pelicula}?api_key=${apiKey}&language=en-US`
@@ -31,7 +33,7 @@ fetch(urlDetallePelicula)
     for (let i = 0; i < data.genres.length; i++) {
         generosPeliculas += `<ol><a class= "genero" href="./detail_genero.html">${data.genres[i].name}</a> </ol>`
     }
-    let portada = `<img class="portadatom" src="https://image.tmdb.org/t/p/w500/${data.poster_path} alt="">`
+    let portada = `https://image.tmdb.org/t/p/w500${data.poster_path}`
    
     console.log(generosPeliculas)
     titulo.innerText= data.original_title;
@@ -40,7 +42,7 @@ fetch(urlDetallePelicula)
     duracion.innerText="Duración: " +data.runtime;
     sinopsis.innerText="Sinopsis: " +data.overview;
     genero.innerHTML="Género: " +generosPeliculas;
-    portadaPelicula.innerHTML= "Imagen" +portada;
+    portadaPelicula.src=portada;
 
 
     return data
@@ -49,6 +51,11 @@ fetch(urlDetallePelicula)
     console.log(error);
     return error
 })
+
+
+/* este es el fetch de recomendaciones */
+
+
 
 /*fetch(urlDondeVerPelicula)
 .then(function(respuesta) {
@@ -88,25 +95,33 @@ fav.addEventListener("click", function(e) {
     localStorage.setItem("favoritos", favsToString )
 })
 
-fetch(urlVerMas)
+verMas.addEventListener("click", function(e) {
+    e.preventDefault();
+    fetch(urlVerMas)
 .then(function (respuesta) {
     return respuesta.json()
 })
 .then(function (data) {
-    console.log(data) 
-    let listaVerMas=''; 
+    console.log(data)
+    let recomendaciones="";  
     for (let i=0; i<3; i++){
         console.log(data.results[i]);
-        verMas.addEventListener('click', function(e){
-            e.preventDefault();
+        recomendaciones += `<article class="portadaCard">
+        <a href="./detail_movie.html?idPersonaje=${data.results[i].id}">
+        <img class= "portada" src= "https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}">
+        <p > Titulo: ${data.results[i].titulo}</p>
+        <p>Fecha : ${data.results[i].fecha}</p>
+        </a>
+    </article>`
 
-        }
-    )}
-    verMas.innerHTML=listaVerMas;
+    }
+    rec.innerHTML=recomendaciones;
     return data
 })
 .catch(function (error) {
     console.log(error);
     return error
 })
+})
+
 
