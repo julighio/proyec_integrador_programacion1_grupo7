@@ -12,12 +12,14 @@ let portadaSerie = document.querySelector('.portadatom');
 let fav=document.querySelector(".botonFav");
 let verMas = document.querySelector('.verMas');
 let rec = document.querySelector('#recom');
+let dondeVer=document.querySelector('.dondeVer');
 
 let apiKey= "371e304b1b9f8df6a3f0e225dc4511b7"
 let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${serie}?api_key=${apiKey}&language=en-US`
 let urlDondeVerSerie= `https://api.themoviedb.org/3/tv/${serie}/watch/providers?api_key=${apiKey}`
 let urlVerMasSerie = `https://api.themoviedb.org/3/tv/${serie}/recommendations?api_key=${apiKey}&language=en-US&page=1`
 
+/* Fetch del detalle de la pelicula*/
 fetch(urlDetalleSerie)
 .then(function (respuesta) {
     return respuesta.json()
@@ -45,32 +47,33 @@ fetch(urlDetalleSerie)
     return error
 })
 
-let favoritos=[]
+/* Boton de favoritos*/
+let favoritosSeries=[]
 
-let recuperoStorage = localStorage.getItem("favoritos")
+let recuperoStorage = localStorage.getItem("favoritosSeries")
 
 if (recuperoStorage != null) {
-    favoritos =  JSON.parse(recuperoStorage)
+    favoritosSeries =  JSON.parse(recuperoStorage)
 }
 
-if (favoritos.includes(serie)) {
+if (favoritosSeries.includes(serie)) {
     fav.innerText = "Quitar de favoritos";
 }
 
 fav.addEventListener("click", function(e) {
     e.preventDefault();
 
-    if (favoritos.includes(serie)) {
-       let indice = favoritos.indexOf(serie)
-       favoritos.splice(indice, 1);
+    if (favoritosSeries.includes(serie)) {
+       let indice = favoritosSeries.indexOf(serie)
+       favoritosSeries.splice(indice, 1);
        fav.innerText = "Agregar a Favoritos";
     }else{
-        favoritos.push(serie)
+        favoritosSeries.push(serie)
         fav.innerText = "Quitar de favoritos"
     }
 
-    let favsToString = JSON.stringify(favoritos);
-    localStorage.setItem("favoritos", favsToString )
+    let favsToString = JSON.stringify(favoritosSeries);
+    localStorage.setItem("favoritosSeries", favsToString )
 })
 
 /* Recomendaciones, fetch + evento*/
@@ -115,3 +118,21 @@ verMas.addEventListener("click", function(e) {
 
     }
 })
+
+/* Mostrar donde ver las series*/
+fetch(urlDondeVerSerie)
+.then(function(respuesta) {
+    return respuesta.json()
+})
+.then(function(data) {
+    console.log("WATCH",data)
+    let dondeVerSerie  = '';
+    for (let i = 0; i < data.results.US.buy.length; i++) {
+        dondeVerSerie += `<li class= "dondeVer"> ${data.results.US.buy[i].provider_name}</li>`
+    }
+    dondeVer.innerHTML+=dondeVerSerie
+})
+.catch(function(error) {
+    console.log(error);
+    return error
+}) 

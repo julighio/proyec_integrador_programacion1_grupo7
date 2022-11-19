@@ -60,7 +60,7 @@ fetch(urlDondeVerPelicula)
     console.log("WATCH",data)
     let dondeVerPeli  = '';
     for (let i = 0; i < data.results.US.rent.length; i++) {
-        dondeVerPeli += `<li class= "dondeVer"> ${data.results.US.rent[i].provider_name} </li>`
+        dondeVerPeli += `<li class= "dondeVer"> ${data.results.US.rent[i].provider_name}</li>`
     }
     dondeVer.innerHTML+=dondeVerPeli
 })

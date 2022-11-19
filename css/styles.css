@@ -1,4 +1,4 @@
-body{ /*todos los html*/
+body { /*todos los html*/
     height: 100%;
     width: 100%;
     background: #3A1C71;  /* fallback for old browsers */
@@ -240,7 +240,17 @@ margin-left: 56px;
 
 
 /* CSS de Favorite, search y detalle de generos*/
-.conteiner{
+.conteiner1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    border: 15px;
+    height: 650px;
+    border-radius: 8px;
+}
+
+.conteiner2{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
