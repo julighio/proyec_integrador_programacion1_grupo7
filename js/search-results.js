@@ -15,7 +15,12 @@ fetch(urlSearch)
     function(data){
         
         for (let i =0; i < data.results.length; i++){
-            console.log(data.results[i]) // me genera que me imprime cada personaje individual
+           
+            console.log(data.results[i]) ;// me genera que me imprime cada personaje individual
+
+            
+
+            
 
         }
             

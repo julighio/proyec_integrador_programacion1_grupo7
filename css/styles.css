@@ -275,7 +275,7 @@ margin-left: 56px;
     border-radius: 8px;
     box-shadow:5px 10px rgb(243, 202, 162);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -304,12 +304,12 @@ margin-left: 56px;
 
 #reco{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 #recom{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 /* responsive con media queris*/
@@ -370,7 +370,7 @@ margin-left: 56px;
 
     .cards{ /*para poner una pelicula al lado de la otra en la primer fila*/
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         
     }
@@ -380,7 +380,7 @@ margin-left: 56px;
         margin-left: 15px;
         box-shadow: 3px 5px rgb(243, 202, 162);
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -409,7 +409,7 @@ margin-left: 56px;
     .cards2{
         margin-top: 20px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items:center;
         
     }
@@ -417,14 +417,14 @@ margin-left: 56px;
     .cards3{
         margin-top: 20px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
 
     }
 
     .padre {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 
 
@@ -437,7 +437,7 @@ margin-left: 56px;
         height: 30px;
         margin-left: 50px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         height: 77vh;
         width: 41vh;
 
@@ -499,7 +499,7 @@ margin-left: 56px;
 
     .conteiner{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         border: 5px;
         align-items: center;
         height: 500px;
@@ -516,7 +516,7 @@ margin-left: 56px;
         width: 140px;
         box-shadow: 2px 4px rgb(243, 202, 162);
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
 
     }
 
