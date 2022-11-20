@@ -52,7 +52,7 @@ fetch(urlgenerosseries)
         
         segundosgeneros += ` <section class="generosSeries">
         <article class="boxGeneros">
-            <a class="titulosGeneros" href="./detail_genero.html?detallegenero=${id}">${tipo}</a>
+            <a class="titulosGeneros" href="./detail_genero.html?detallegenero=${id}&name=${tipo}">${tipo}</a>
         </article>`
     }
     sectionseries.innerHTML= segundosgeneros;
