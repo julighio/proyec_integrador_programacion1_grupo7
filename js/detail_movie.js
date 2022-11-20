@@ -30,7 +30,9 @@ fetch(urlDetallePelicula)
     
     let generosPeliculas  = '';
     for (let i = 0; i < data.genres.length; i++) {
-        generosPeliculas += `<ol><a class= "genero" href="./detail_genero.html">${data.genres[i].name}</a> </ol>`
+        let tipo= data.genres[i].name;
+        let id= data.genres[i].id;
+        generosPeliculas += `<ol><a class= "genero" href="./detail_genero.html?detallegenero=${id}&name=${tipo}">${data.genres[i].name}</a> </ol>`
     }
     let portada = `https://image.tmdb.org/t/p/w500${data.poster_path}`
    
@@ -108,8 +110,8 @@ fetch(urlVerMas)
         recomendaciones += `<article class="portadaCard">
         <a href="./detail_movie.html?idPersonaje=${data.results[i].id}">
         <img class= "portada" src= "https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}">
-        <p > Titulo: ${data.results[i].titulo}</p>
-        <p>Fecha : ${data.results[i].fecha}</p>
+        <p > Titulo: ${data.results[i].title}</p>
+        <p>Fecha : ${data.results[i].release_date}</p>
         </a>
     </article>`
 

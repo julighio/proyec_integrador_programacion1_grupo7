@@ -29,7 +29,9 @@ fetch(urlDetalleSerie)
     
     let generosSeries  = '';
     for (let i = 0; i < data.genres.length; i++) {
-        generosSeries += `<ol><a class= "generoItem" href="./detail_genero.html">${data.genres[i].name}</a> </ol>`
+        let tipo= data.genres[i].name;
+        let id= data.genres[i].id;
+        generosSeries += `<ol><a class= "generoItem" href="./detail_genero.html?detallegenero=${id}&name=${tipo}">${data.genres[i].name}</a> </ol>`
     }
     let portada = `https://image.tmdb.org/t/p/w500${data.poster_path}`
     console.log(generosSeries)
@@ -87,7 +89,7 @@ fetch(urlVerMasSerie)
     for (let i=0; i<3; i++){
         console.log(data.results[i]);
         recomendaciones += `<article class="portadaCard">
-        <a href="./detail_movie.html?idPersonaje=${data.results[i].id}">
+        <a href="./detail_series.html?idPersonajes=${data.results[i].id}">
         <img class= "portada" src= "https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}">
         <p > Titulo: ${data.results[i].name}</p>
         <p>Fecha : ${data.results[i].first_air_date}</p>
@@ -127,8 +129,8 @@ fetch(urlDondeVerSerie)
 .then(function(data) {
     console.log("WATCH",data)
     let dondeVerSerie  = '';
-    for (let i = 0; i < data.results.US.buy.length; i++) {
-        dondeVerSerie += `<li class= "dondeVer"> ${data.results.US.buy[i].provider_name}</li>`
+    for (let i = 0; i < data.results.US.flatrate.length; i++) {
+        dondeVerSerie += `<li class= "dondeVer"> ${data.results.US.flatrate[i].provider_name}</li>`
     }
     dondeVer.innerHTML+=dondeVerSerie
 })
