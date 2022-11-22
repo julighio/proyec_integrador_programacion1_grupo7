@@ -1,7 +1,7 @@
 let apiKey= "371e304b1b9f8df6a3f0e225dc4511b7"
 /* Recupero del array de las peliculas */
 let recuperoStorage=localStorage.getItem('favoritos'); /*metodo  que me dice que insertes la key como string, recupero la informacion en el local storage*/
-let favoritos = JSON.parse(recuperoStorage); /* Quiero transformar el json en string/array para converitrlo en un dato manipulable en java script */
+let favoritos = JSON.parse(recuperoStorage); /* Quiero transformar el json en array para converitrlo en un dato manipulable en java script */
 /*Aca ya recuperamos el array*/
 
 /* Recupero del array de las series */
@@ -13,7 +13,7 @@ let section2 = document.querySelector(".conteiner2")
 
 /* Bloque de codigo para el array de las peliculas */
 if (favoritos.length == 0 || favoritos==null){
-    section1.innerHTML = '<p>No hay lista de series favoritas aún</p>'
+    section1.innerHTML = '<p>No hay lista de peliculas favoritas aún</p>'
     
 } else {
     let pelisFavoritas = ''
