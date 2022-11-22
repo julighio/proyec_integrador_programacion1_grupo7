@@ -10,7 +10,7 @@ let duracion = document.querySelector('.duracion');
 let sinopsis = document.querySelector('.sinopsis');
 let genero = document.querySelector('.genero');
 let portadaPelicula = document.querySelector(".portadatom");
-let fav=document.querySelector(".botonFav");
+let fav=document.querySelector(".botonFav")
 let verMas = document.querySelector('.verMas');
 let rec = document.querySelector('#reco');
 let dondeVer=document.querySelector('.dondeVer');
@@ -72,7 +72,7 @@ fetch(urlDondeVerPelicula)
 let favoritos=[]
 
 let recuperoStorage = localStorage.getItem("favoritos")
-
+// Validación
 if (recuperoStorage != null) {
     favoritos =  JSON.parse(recuperoStorage)
 }
@@ -84,17 +84,17 @@ if (favoritos.includes(pelicula)) {
 fav.addEventListener("click", function(e) {
     e.preventDefault();
 
-    if (favoritos.includes(pelicula)) {
+    if (favoritos.includes(pelicula)) { // aca lo que estoy queriendo es sacarlo
        let indice = favoritos.indexOf(pelicula)
        favoritos.splice(indice, 1);
        fav.innerText = "Agregar a Favoritos";
-    }else{
+    }else{ // aca agregarlo 
         favoritos.push(pelicula)
         fav.innerText = "Quitar de favoritos"
     }
 
     let favsToString = JSON.stringify(favoritos);
-    localStorage.setItem("favoritos", favsToString )
+    localStorage.setItem("favoritos", favsToString)
 })
 
 /* Recomendaciones, fetch + evento*/
