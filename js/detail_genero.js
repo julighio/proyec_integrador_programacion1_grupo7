@@ -78,3 +78,8 @@ fetch(generoserie)
     console.log(error)
     return error
 })
+
+window.addEventListener('load', function(e){
+
+    //consultar a eve esto 
+})
