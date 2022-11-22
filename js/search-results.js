@@ -28,7 +28,7 @@ fetch(urlSearchMovies)
     if (info.length== 0){
         resultado.innerText=`No existe el resultado para ${peliculaoserie}`;
     } else {
-        for (let i =0; i < info.length; i++){ ;
+        for (let i =0; i < 5; i++){ ;
             let titulo = info[i].title
             let imagenes = info[i].poster_path
             let id = info[i].id
