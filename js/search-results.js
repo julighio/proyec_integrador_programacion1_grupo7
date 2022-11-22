@@ -27,23 +27,25 @@ fetch(urlSearchMovies)
     let info = data.results;
     if (info.length== 0){
         resultado.innerText=`No existe el resultado para ${peliculaoserie}`;
+    } else {
+        for (let i =0; i < info.length; i++){ ;
+            let titulo = info[i].title
+            let imagenes = info[i].poster_path
+            let id = info[i].id
+            let fecha = info[i].release_date
+    
+            movies += `<article class="portadaCard">
+                            <a href="./detail_movie.html?idPersonaje=${id}">
+                            <img class= "portada" src= "https://image.tmdb.org/t/p/w500/${imagenes}">
+                            <p > Titulo: ${titulo}</p>
+                            <p>Fecha : ${fecha}</p>
+                            </a>
+                        </article>`
+        }
+        section.innerHTML=movies;  
+        return data;
     }
-    for (let i =0; i < info.length; i++){ ;
-        let titulo = info[i].title
-        let imagenes = info[i].poster_path
-        let id = info[i].id
-        let fecha = info[i].release_date
-
-        movies += `<article class="portadaCard">
-                        <a href="./detail_movie.html?idPersonaje=${id}">
-                        <img class= "portada" src= "https://image.tmdb.org/t/p/w500/${imagenes}">
-                        <p > Titulo: ${titulo}</p>
-                        <p>Fecha : ${fecha}</p>
-                        </a>
-                    </article>`
-    }
-    section.innerHTML=movies;  
-    return data;
+    
 })  
 .catch(function(error){
         console.log(error)
@@ -60,26 +62,29 @@ fetch(urlSearchSeries)
 .then(function(data){
     series=''
     console.log(data);
-    let info = data.results;
+    let infoSeries = data.results;
     if (info.length== 0){
         resultado.innerText=`No existe el resultado para ${peliculaoserie}`;
+    } else {
+        for (let i =0; i < info.length; i++){ ;
+            if (infoSeries[i].poster_path != null) {
+                let titulo = infoSeries[i].name
+                let imagenes = infoSeries[i].poster_path
+                let id = infoSeries[i].id
+                let fecha = infoSeries[i].first_air_date
+    
+                series += `<article class="portadaCard">
+                                <a href="./detail_movie.html?idPersonaje=${id}">
+                                <img class= "portada" src= "https://image.tmdb.org/t/p/w500/${imagenes}">
+                                <p > Titulo: ${titulo}</p>
+                                <p>Fecha : ${fecha}</p>
+                                </a>
+                            </article>`
+            } 
+        }
+        section.innerHTML=series;  
+        return data;
     }
-    for (let i =0; i < info.length; i++){ ;
-        let titulo = info[i].name
-        let imagenes = info[i].poster_path
-        let id = info[i].id
-        let fecha = info[i].first_air_date
-
-        series += `<article class="portadaCard">
-                        <a href="./detail_movie.html?idPersonaje=${id}">
-                        <img class= "portada" src= "https://image.tmdb.org/t/p/w500/${imagenes}">
-                        <p > Titulo: ${titulo}</p>
-                        <p>Fecha : ${fecha}</p>
-                        </a>
-                    </article>`
-    }
-    section.innerHTML=series;  
-    return data;
 })  
 .catch(function(error){
         console.log(error)
