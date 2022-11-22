@@ -113,7 +113,7 @@ fetch(urlVerMas)
         <p > Titulo: ${data.results[i].title}</p>
         <p>Fecha : ${data.results[i].release_date}</p>
         </a>
-    </article>`
+    </article>` 
 
     }
     rec.innerHTML=recomendaciones;
